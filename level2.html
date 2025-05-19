@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Niveau 2 - Faille XSS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Niveau 2</h1>
+  <p>Un champ de recherche vulnérable... Trouve la faille !</p>
+
+  <form method="GET" action="level2.html">
+    <input type="text" name="query" placeholder="Tape quelque chose..." />
+    <button type="submit">Rechercher</button>
+  </form>
+
+  <div>
+    Résultats pour :
+    <strong>
+      <script>
+        const params = new URLSearchParams(window.location.search);
+        const query = params.get("query") || "";
+        document.write(query);
+
+        if (query.includes("onerror")) {
+          alert("FLAG{you_triggered_XSS}");
+        }
+      </script>
+    </strong>
+  </div>
+
+  <a href="index.html">Retour à l'accueil</a>
+</body>
+</html>
