@@ -1,0 +1,135 @@
+/* Reset basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f0f0f5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  background: #1f1f38;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+  width: 100%;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 1.2px;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #c9c9d9;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+ul li a {
+  background: #764ba2;
+  color: #f0f0f5;
+  padding: 12px 25px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(118, 75, 162, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+ul li a:hover {
+  background: #667eea;
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.8);
+  transform: translateY(-3px);
+}
+
+a.back-link {
+  display: block;
+  margin-top: 35px;
+  text-align: center;
+  font-size: 1rem;
+  color: #9a8cba;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a.back-link:hover {
+  color: #f0f0f5;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  box-shadow: 0 0 8px 2px #667eea;
+}
+
+button {
+  background: #764ba2;
+  color: #f0f0f5;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(118, 75, 162, 0.6);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background: #667eea;
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.8);
+  transform: translateY(-2px);
+}
+
+div.results {
+  background: #2e2e57;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #c9c9d9;
+  text-align: center;
+  min-height: 40px;
+  margin-top: 10px;
+  user-select: text;
+  word-break: break-word;
+}
